@@ -85,8 +85,8 @@ public class AddressBookStructure {
 	@Override
 	public String toString()
 	{
-		return "First name "+firstname+"\nLast name "+lastname+"\n Address "+address+"\n city "
-	    +city+"\n state "+state+"\n Zip Code "+zipcode+"\n Phone No. "+phoneno+"\nemail "+email;
+		return "First name "+firstname+"\nLast name "+lastname+"\nAddress "+address+"\nCity "
+	    +city+"\nState "+state+"\nZip Code "+zipcode+"\nPhone No. "+phoneno+"\nEmail "+email;
 	}
 }
 
