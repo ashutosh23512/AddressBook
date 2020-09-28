@@ -48,6 +48,18 @@ public class AddressBookContact {
 		 }
 			
 	 }
+	 public String deleteContact(String del) {
+		 
+			AddressBookStructure a=new AddressBookStructure("","","", "", "", "0","", "");
+			 for(AddressBookStructure x:addressBook) {
+				 if(x.getfirstname().equalsIgnoreCase(del)) {
+					 a=x;
+				 }
+			 }
+			 addressBook.remove(a);
+			 return "Delete success";
+				 
+			 }
 	
 		
 	 }

@@ -14,6 +14,7 @@ public class AddressBookMain {
 		Scanner s = new Scanner(System.in); 
 		System.out.println("Press 1 to Add New Contact ");
 		System.out.println("Press 2 to Edit Contact ");
+		System.out.println("Press 3 to Delete Contact ");
 		System.out.println("Press 4 to View Address Book ");
 
 		int choice = s.nextInt();
@@ -92,7 +93,31 @@ public class AddressBookMain {
 			}
 			break;
 			
-		
+		case 3:
+			ArrayList<AddressBookStructure> l1 = new ArrayList<AddressBookStructure>();
+			l1=newp.getAddressBook();
+			if(l1.size() == 0) {
+			System.out.println("Empty Address Book");
+			break;
+			}
+			else
+			{
+				Scanner s3 = new Scanner(System.in);	
+				System.out.println("Enter First Name of the contact to be deleted");
+				String name = s3.nextLine();
+				if(newp.check(name))
+				{
+					String msg=newp.deleteContact(name);
+					System.out.println(msg);
+					
+				}
+				else
+				{System.out.println("No such contact found");
+				break;
+				}
+			}
+			break;
+
 					
 		case 4:
 			System.out.println(newp.getAddressBook());
