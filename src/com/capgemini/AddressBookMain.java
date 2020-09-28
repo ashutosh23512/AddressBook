@@ -8,15 +8,38 @@ public class AddressBookMain {
 		
 		AddressBookContact newp = new AddressBookContact();
 		int flag=-1;
+		
 		do {
+			
 		AddressBookStructure ab = new AddressBookStructure();
 
 		Scanner s = new Scanner(System.in); 
+		HashMap<String, ArrayList<AddressBookStructure>> bookSystem = new HashMap<String, ArrayList<AddressBookStructure>>();
+		int numberOfAddressBooks = Integer.parseInt(s.nextLine());
+		for (int j = 0; j < numberOfAddressBooks; j++) {
+			String bookName;
+			while(true) {
+			System.out.println("Enter the name of the address book:");
+			bookName = s.nextLine();
+			int flagg = 0;
+				for (Map.Entry<String, ArrayList<AddressBookStructure>> entry : bookSystem.entrySet()) {
+					if(entry.getKey().equals(bookName)) {
+						flag++;
+					}
+				}
+				if(flagg == 0) {
+					break;
+				}
+				else {
+					System.out.println("already registerd with the name, try adding new book name");
+				}
+			}}
 		System.out.println("Press 1 to Add New Contact ");
 		System.out.println("Press 2 to Edit Contact ");
 		System.out.println("Press 3 to Delete Contact ");
 		System.out.println("Press 4 to View Address Book ");
-
+		
+		
 		int choice = s.nextInt();
 		Scanner s1 = new Scanner(System.in); 
 		switch(choice)
