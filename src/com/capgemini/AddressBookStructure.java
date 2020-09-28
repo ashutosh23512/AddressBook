@@ -89,4 +89,3 @@ public class AddressBookStructure {
 	    +city+"\nState "+state+"\nZip Code "+zipcode+"\nPhone No. "+phoneno+"\nEmail "+email;
 	}
 }
-
